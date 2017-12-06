@@ -1,46 +1,42 @@
-<div layout-property-details>
+<div class="layout-property-details">
   <div class="property-details">
-    <form class="example-form">
-            <mat-form-field>
-              <input matInput placeholder="Favorite food" value="Sushi">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Favorite food" value="Sushi">
-              </mat-form-field>
-              <mat-form-field>
-                  <input matInput placeholder="Favorite food" value="Sushi">
-                </mat-form-field>
-              
-
-            
-                <mat-form-field>
-                    <mat-select placeholder="Favorite food">
-                      <mat-option *ngFor="let food of foods" [value]="food.value">
-                        {{ food.viewValue }}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
-
-                  <mat-form-field>
-                      <mat-select placeholder="Favorite food">
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                          {{ food.viewValue }}
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-
-                    <mat-form-field>
-                        <mat-select placeholder="Favorite food">
-                          <mat-option *ngFor="let food of foods" [value]="food.value">
-                            {{ food.viewValue }}
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field>
-
-                      
-
-
-          </form>
-
+    <mat-card>
+      <mat-toolbar>Property Details</mat-toolbar>
+      <form fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Property Name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Email">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Phone Number">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="City">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="District">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="State">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div fxLayoutAlign="center center">
+          <button mat-raised-button>Submit</button>
+        </div>
+      </form>
+    </mat-card>
   </div>
 </div>

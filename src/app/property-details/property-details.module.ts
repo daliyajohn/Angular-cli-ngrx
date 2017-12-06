@@ -5,6 +5,9 @@ import { PropertyDetailsRoutingModule } from './property-details-routing.module'
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -12,7 +15,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatSelectModule,
     PropertyDetailsRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   declarations: [ PropertyDetailsComponent ],
   exports: [ PropertyDetailsComponent ],
