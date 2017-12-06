@@ -5,7 +5,7 @@ import { PropertyDetailsComponent } from './property-details.component';
 @NgModule({
   imports: [
     RouterModule.forChild([
-      { path: '', component: PropertyDetailsComponent }
+      { path: 'jjj', component: PropertyDetailsComponent }
     ])
   ],
   exports: [RouterModule]
