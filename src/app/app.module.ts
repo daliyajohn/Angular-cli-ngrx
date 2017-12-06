@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppService } from './app.service';
 import { PropertyDetailsModule } from './property-details/property-details.module';
-
-
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,9 @@ import { PropertyDetailsModule } from './property-details/property-details.modul
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    PropertyDetailsModule
+    PropertyDetailsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [ AppService ],
   bootstrap: [AppComponent]
