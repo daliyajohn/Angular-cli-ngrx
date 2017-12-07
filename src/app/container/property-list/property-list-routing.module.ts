@@ -1,12 +1,16 @@
-import { PropertyListComponent } from './property-list.component';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ModuleWithProviders } from '@angular/core';
+import { PropertyListComponent } from './property-list.component';
 
-const propertyListRoutes: Routes = [
+const routes: Routes = [
   {
     path: '',
-    component: PropertyListComponent
+    component: PropertyListComponent, pathMatch: 'full'
   }
 ];
 
-export const PropertyListRoutingModule: ModuleWithProviders = RouterModule.forChild(propertyListRoutes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class PropertyListRoutingModule { }
