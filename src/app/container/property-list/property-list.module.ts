@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PropertyDetailsComponent } from './property-details.component';
-import { PropertyDetailsRoutingModule } from './property-details-routing.module';
+import { PropertyListComponent } from './property-list.component';
+import { PropertyListRoutingModule } from './property-list-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -14,13 +14,13 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     MatInputModule,
     MatSelectModule,
-    PropertyDetailsRoutingModule,
+    PropertyListRoutingModule,
     FlexLayoutModule,
     MatCardModule,
     MatToolbarModule,
     MatButtonModule
   ],
-  declarations: [ PropertyDetailsComponent ],
-  exports: [ PropertyDetailsComponent ],
+  declarations: [ PropertyListComponent ],
+  exports: [ PropertyListComponent ],
 })
-export class PropertyDetailsModule { }
+export class PropertyListModule { }
