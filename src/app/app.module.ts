@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { simpleReducer } from './reducer/simple.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     PropertyDetailsModule,
     RouterModule,
     AppRoutingModule,
+    CoreModule,
     StoreModule.forRoot({ message: simpleReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 5,
