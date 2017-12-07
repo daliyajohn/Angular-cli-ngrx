@@ -7,9 +7,9 @@ import { PropertyDetailsModule } from './property-details/property-details.modul
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
-import { simpleReducer } from './reducer/simple.reducer';
+import { simpleReducer } from './store/reducer/simple.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { CoreModule } from './core/core.module';
+import { StoresModule } from './store/core.module';
 
 @NgModule({
   declarations: [
@@ -21,11 +21,10 @@ import { CoreModule } from './core/core.module';
     PropertyDetailsModule,
     RouterModule,
     AppRoutingModule,
-    CoreModule,
+    StoresModule,
     StoreModule.forRoot({ message: simpleReducer }),
     StoreDevtoolsModule.instrument({
-      maxAge: 5,
-      // monitor: monitorReducer
+      maxAge: 5
     })
   ],
   providers: [ AppService ],
