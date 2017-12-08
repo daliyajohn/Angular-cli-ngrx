@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from './service/auth.service';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
   ],
-  declarations: [  ],
+  declarations: [ ],
   exports: [ ],
   providers: [ AuthService ],
 })
