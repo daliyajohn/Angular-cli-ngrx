@@ -1,7 +1,7 @@
 .property-details {
-    width: 375px;
+    width: 382px;
     margin: 0 auto;
-    padding-top: 5em;
+    padding: 1em 0em 1em 0em;
 }
 .property-details .mat-card {
     padding: 0px;
@@ -11,4 +11,7 @@ form {
 }
 .property-details .mat-raised-button {
     width: 150px;
+}
+.image-uploader {
+    padding: 14px 0px 20px 0px;
 }

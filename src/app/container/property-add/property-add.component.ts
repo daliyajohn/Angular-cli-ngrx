@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { User } from './property-add.interface';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-property-add',
   templateUrl: './property-add.component.html',
   styleUrls: ['./property-add.component.css']
 })
+
 export class PropertyAddComponent {
   propertyAdd: FormGroup;
   public submitted: boolean;
@@ -19,7 +21,7 @@ export class PropertyAddComponent {
   ];
 
   constructor(private _fb: FormBuilder) {
-
+    // this.fn();
     // form validation
     this.propertyAdd = this._fb.group({
       propertyName: ['',  Validators.compose([<any>Validators.required, <any>Validators.maxLength(30)])],
@@ -30,6 +32,17 @@ export class PropertyAddComponent {
       state: ['',  Validators.compose([<any>Validators.required, <any>Validators.maxLength(30)])],
     });
    }
+
+  //  fn() {
+  //     const num = [];
+  //     const ob$ = Observable.
+  //     ob$.subscribe(
+  //       x => console.log(x),
+  //       err => {
+  //         console.log(err);
+  //       }
+  //     );
+  //  }
 
   savePropertyDetails() {
     // code

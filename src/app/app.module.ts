@@ -10,6 +10,8 @@ import { simpleReducer } from './store/reducer/simple.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoresModule } from './store/core.module';
 import { LayoutComponent } from './container/layout/layout.component';
+import { ImageUploadModule } from 'angular2-image-upload';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { LayoutComponent } from './container/layout/layout.component';
     BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
+    ImageUploadModule.forRoot(),
     StoresModule,
     StoreModule.forRoot({ message: simpleReducer }),
     StoreDevtoolsModule.instrument({

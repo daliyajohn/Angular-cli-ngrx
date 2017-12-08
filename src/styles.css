@@ -15,9 +15,8 @@ body {
     font-size: 15px;
     font-weight: initial;
     letter-spacing: 0.3px!important;
-    overflow: hidden;
 }
 .mat-toolbar {
-    background: #2d5491;
+    background: #009688;
     color: white;
 }

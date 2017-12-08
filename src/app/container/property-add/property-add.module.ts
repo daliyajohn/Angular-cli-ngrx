@@ -8,9 +8,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ImageUploadModule } from 'angular2-image-upload';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
+    ImageUploadModule.forRoot(),
     ReactiveFormsModule
   ],
   declarations: [ PropertyAddComponent ],
