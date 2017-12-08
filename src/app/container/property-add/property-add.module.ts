@@ -9,6 +9,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
     FlexLayoutModule,
     MatCardModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   declarations: [ PropertyAddComponent ],
   exports: [ PropertyAddComponent ],

@@ -2,32 +2,41 @@
   <div class="property-details">
     <mat-card>
       <mat-toolbar>Property Details</mat-toolbar>
-      <form fxLayout="column">
+      <form [formGroup] = "propertyAdd" fxLayout="column"  novalidate (ngSubmit)="savePropertyDetails()">
         <mat-form-field>
-          <input matInput placeholder="Property Name">
+          <input matInput placeholder="Property Name" formControlName="propertyName">
+          <span *ngIf="propertyAdd.get('propertyName').hasError('required') && propertyAdd.get('propertyName').touched">
+            Name required.
+          </span>
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Email">
+          <input matInput placeholder="Email" formControlName="email">
+          <span *ngIf="propertyAdd.get('email').hasError('required') && propertyAdd.get('email').touched">
+              Email required.
+          </span>
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Phone Number">
+          <input matInput placeholder="Phone Number" formControlName="phoneno">
+          <span *ngIf="propertyAdd.get('phoneno').hasError('required') && propertyAdd.get('phoneno').touched">
+              Phone no required.
+          </span>
         </mat-form-field>
         <mat-form-field>
-          <mat-select placeholder="City">
+          <mat-select placeholder="City" formControlName="city">
             <mat-option *ngFor="let food of foods" [value]="food.value">
               {{ food.viewValue }}
             </mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field>
-          <mat-select placeholder="District">
+          <mat-select placeholder="District" formControlName="district">
             <mat-option *ngFor="let food of foods" [value]="food.value">
               {{ food.viewValue }}
             </mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field>
-          <mat-select placeholder="State">
+          <mat-select placeholder="State" formControlName="state">
             <mat-option *ngFor="let food of foods" [value]="food.value">
               {{ food.viewValue }}
             </mat-option>
