@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PropertyAddComponent } from './container/property-add/property-add.component';
-import { LayoutComponent } from './layout/layout.component';
+import { LayoutComponent } from './container/layout/layout.component';
+
 
 const appRoutes = [
       { path: '', redirectTo: 'propertyadd', pathMatch: 'full'},
