@@ -6,11 +6,11 @@ import { AppService } from './app.service';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
-import { simpleReducer } from './store/reducer/simple.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoresModule } from './store/core.module';
 import { LayoutComponent } from './container/layout/layout.component';
 import { ImageUploadModule } from 'angular2-image-upload';
+import { PropertyAddReducer } from './store/reducer/property-add.reducer';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { ImageUploadModule } from 'angular2-image-upload';
     AppRoutingModule,
     ImageUploadModule.forRoot(),
     StoresModule,
-    StoreModule.forRoot({ message: simpleReducer }),
+    StoreModule.forRoot({ message: PropertyAddReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
