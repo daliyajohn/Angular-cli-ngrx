@@ -7,11 +7,8 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { StoresModule } from './store/core.module';
 import { LayoutComponent } from './container/layout/layout.component';
 import { ImageUploadModule } from 'angular2-image-upload';
-import { PropertyAddReducer } from './store/reducer/property-add.reducer';
-
 
 @NgModule({
   declarations: [
@@ -24,8 +21,7 @@ import { PropertyAddReducer } from './store/reducer/property-add.reducer';
     RouterModule,
     AppRoutingModule,
     ImageUploadModule.forRoot(),
-    StoresModule,
-    StoreModule.forRoot({ message: PropertyAddReducer }),
+    StoreModule.forRoot({  }),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })

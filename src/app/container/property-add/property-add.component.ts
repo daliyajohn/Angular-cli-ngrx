@@ -21,8 +21,6 @@ export class PropertyAddComponent {
   ];
 
   constructor(private _fb: FormBuilder) {
-    // this.fn();
-    // form validation
     this.propertyAdd = this._fb.group({
       propertyName: ['',  Validators.compose([<any>Validators.required, <any>Validators.maxLength(30)])],
       email: ['',  Validators.compose([<any>Validators.required, <any>Validators.maxLength(30)])],
@@ -32,17 +30,6 @@ export class PropertyAddComponent {
       state: ['',  Validators.compose([<any>Validators.required, <any>Validators.maxLength(30)])],
     });
    }
-
-  //  fn() {
-  //     const num = [];
-  //     const ob$ = Observable.
-  //     ob$.subscribe(
-  //       x => console.log(x),
-  //       err => {
-  //         console.log(err);
-  //       }
-  //     );
-  //  }
 
   savePropertyDetails() {
     // code
