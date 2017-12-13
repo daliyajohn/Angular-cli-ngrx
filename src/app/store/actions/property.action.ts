@@ -12,5 +12,4 @@ export class SubmitFailure implements Action {
     readonly type = SUBMIT_FAILURE;
 }
 
-
 export type propertyAction = SubmitSuccess | SubmitFailure ;

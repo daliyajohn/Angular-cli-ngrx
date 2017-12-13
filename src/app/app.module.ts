@@ -10,6 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LayoutComponent } from './container/layout/layout.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import * as fromStore from './store';
+import { reducerConnect } from './store';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import * as fromStore from './store';
     RouterModule,
     AppRoutingModule,
     ImageUploadModule.forRoot(),
-    StoreModule.forRoot({  }),
+    StoreModule.forRoot({ datas: reducerConnect }),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
