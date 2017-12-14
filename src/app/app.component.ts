@@ -10,4 +10,5 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showFiller = false;
 }

@@ -11,6 +11,9 @@ import { LayoutComponent } from './container/layout/layout.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import * as fromStore from './store';
 import { propertyReducer } from './store/reducers/property.reducer';
+
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 // import { reducerConnect } from './store';
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { propertyReducer } from './store/reducers/property.reducer';
     BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
+    MatSidenavModule,
     ImageUploadModule.forRoot(),
     StoreModule.forRoot({ dataReducer: propertyReducer }),
     StoreDevtoolsModule.instrument({
