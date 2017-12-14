@@ -13,6 +13,8 @@ import * as fromStore from './store';
 import { propertyReducer } from './store/reducers/property.reducer';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 // import { reducerConnect } from './store';
 @NgModule({
@@ -26,6 +28,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     RouterModule,
     AppRoutingModule,
     MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
     ImageUploadModule.forRoot(),
     StoreModule.forRoot({ dataReducer: propertyReducer }),
     StoreDevtoolsModule.instrument({
