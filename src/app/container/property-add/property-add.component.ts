@@ -50,14 +50,15 @@ export class PropertyAddComponent implements OnInit {
    savePropertyDetails() {
     this.store.dispatch(
       {
-        type: '[submit] success',
+        type: 'SUBMIT_SUCCESS',
         payload: {
-          property_name: this.propertyName,
-          email: this.email,
-          phone_number: this.phoneno,
-          city: this.city,
-          district: this.district,
-          state: this.state
+          id: '123',
+          property_name: this.propertyName ? this.propertyName : '',
+          email: this.email ? this.email : '',
+          phone_number: this.phoneno ? this.phoneno : '',
+          city: this.city ? this.city : '',
+          district: this.district ? this.district : '',
+          state: this.state ? this.state : ''
         }
       }
     );
