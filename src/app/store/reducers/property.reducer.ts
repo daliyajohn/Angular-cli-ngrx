@@ -5,25 +5,25 @@ import { PropertyModel } from '../../models/property.model';
 import * as fromAction from '../actions/property.action';
 
 export interface PropertyState {
-    data: PropertyModel[];
+    dataReducer: PropertyModel[];
 }
 
-export const PropertyInitialState: PropertyState = {
-    data: []
-};
 
 export const newState = (state, updatedState) => {
     return Object.assign({}, state, updatedState );
 };
 
 export function propertyReducer (state, action: Action): PropertyState {
+    console.log(action.type);
     switch (action.type) {
         case fromAction.SUBMIT_SUCCESS :
         return newState(state, action.payload);
 
         case fromAction.SUBMIT_FAILURE :
-        return newState(state, action.payload);
+        return newState(state, {name: 'Lenin'});
     }
     return state;
 }
+
+
 

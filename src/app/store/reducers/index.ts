@@ -1,10 +1,10 @@
 import * as fromReducer from './property.reducer';
 import { ActionReducerMap } from '@ngrx/store';
 
-export interface PropertyStates {
-    datas: fromReducer.PropertyState;
-}
+// export interface PropertyStates {
+//     data: fromReducer.PropertyState;
+// }
 
-export const reducerConnect: ActionReducerMap<PropertyStates> = {
-    datas: fromReducer.propertyReducer
-};
+// export const reducerConnect: ActionReducerMap<PropertyStates> = {
+//     data: fromReducer.propertyReducer
+// };
