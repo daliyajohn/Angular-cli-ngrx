@@ -2,7 +2,7 @@
   <div class="property-details">
     <mat-card>
       <mat-toolbar>Property Details</mat-toolbar>
-      <form [formGroup] = "propertyAdd" fxLayout="column"  novalidate (ngSubmit)="savePropertyDetails(propertyAdd)">
+      <form [formGroup] = "propertyAdd" fxLayout="column"  novalidate (ngSubmit)="savePropertyDetails(propertyAdd.value)">
         <mat-form-field>
           <input matInput placeholder="Property Name" formControlName="propertyName">
           <span *ngIf="propertyAdd.get('propertyName').hasError('required') && propertyAdd.get('propertyName').touched">

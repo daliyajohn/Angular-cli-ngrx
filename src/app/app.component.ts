@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { SIDENAV_OPEN } from './store/actions/property.action';
 
 
 @Component({
@@ -10,5 +11,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showFiller = false;
+  constructor(private store: Store<any>) {}
+  sideNavState() {
+    this.store.dispatch({
+      type: SIDENAV_OPEN
+    });
+  }
 }

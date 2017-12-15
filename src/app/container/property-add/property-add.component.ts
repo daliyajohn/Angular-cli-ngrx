@@ -44,7 +44,7 @@ export class PropertyAddComponent implements OnInit {
 
    ngOnInit() {
     this.detailedData$ = this.store.select<any>('dataReducer');
-    console.log('daliya'  , this.propertyAdd);
+    console.log('daliya'  , this.propertyAdd.value.propertyName);
    }
 
    savePropertyDetails() {
@@ -52,15 +52,21 @@ export class PropertyAddComponent implements OnInit {
       {
         type: 'SUBMIT_SUCCESS',
         payload: {
-          id: '123',
-          property_name: this.propertyName ? this.propertyName : '',
-          email: this.email ? this.email : '',
-          phone_number: this.phoneno ? this.phoneno : '',
-          city: this.city ? this.city : '',
-          district: this.district ? this.district : '',
-          state: this.state ? this.state : ''
+          id: '1',
+          property_name: this.propertyAdd.value.propertyName,
+          email: this.propertyAdd.value.email,
+          phone_number: this.propertyAdd.value.phoneno,
+          city: this.propertyAdd.value.city,
+          district: this.propertyAdd.value.district,
+          state: this.propertyAdd.value.state
         }
       }
     );
   }
+
+
+
+
+
+
 }

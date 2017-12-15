@@ -7,3 +7,4 @@ export interface PropertyModel {
     district: string;
     state: string;
 }
+
