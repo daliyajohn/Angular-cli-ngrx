@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { User } from './property-add.interface';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
+import * as fromAction from '../../store/actions/property.action';
 
 @Component({
   selector: 'app-property-add',
@@ -50,7 +51,7 @@ export class PropertyAddComponent implements OnInit {
    savePropertyDetails() {
     this.store.dispatch(
       {
-        type: 'SUBMIT_SUCCESS',
+        type: fromAction.SUBMIT,
         payload: {
           id: '1',
           property_name: this.propertyAdd.value.propertyName,

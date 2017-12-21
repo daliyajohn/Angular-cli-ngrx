@@ -1,10 +1,18 @@
 import { Action } from '@ngrx/store';
 
+export const SUBMIT = '[submit] submit';
 export const SUBMIT_SUCCESS = '[submit] success';
 export const SUBMIT_FAILURE = '[submit] failure';
 
 export const SIDENAV_OPEN = '[sidenav] true';
 export const SIDENAV_CLOSE = '[sidenav] false';
+
+
+
+export class Submit implements Action {
+    readonly type = SUBMIT;
+    constructor(public payload: any) { }
+}
 
 export class SubmitSuccess implements Action {
     readonly type = SUBMIT_SUCCESS;
@@ -23,4 +31,4 @@ export class SideNavClose implements Action {
     readonly type = SIDENAV_CLOSE;
 }
 
-export type propertyAction = SubmitSuccess | SubmitFailure | SideNavOpen | SideNavClose;
+export type propertyAction = Submit | SubmitSuccess | SubmitFailure | SideNavOpen | SideNavClose;

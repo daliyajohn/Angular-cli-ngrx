@@ -8,14 +8,15 @@ export interface PropertyState {
     dataReducer: PropertyModel[];
 }
 
-// export const newState = (state, updatedState) => {
-//     return Object.assign({}, state, updatedState );
-// };
-
 export function propertyReducer (state, action): PropertyState {
     console.log(action.payload);
     switch (action.type) {
-        case 'SUBMIT_SUCCESS' :
+        case fromAction.SUBMIT:
+        return {
+            ...state,
+            dataReducer: action.payload
+        };
+        case fromAction.SUBMIT_SUCCESS:
             return {
                 ...state,
                 dataReducer: action.payload
@@ -29,6 +30,8 @@ export function propertyReducer (state, action): PropertyState {
     }
     return state;
 }
+
+export const getData = (states: PropertyState) => states.dataReducer;
 
 
 
